@@ -6,7 +6,8 @@
   command: mv /home/{{ ansible_user }}/{{ item.oldName }} /home/{{ ansible_user }}/{{ item.newName }}
   when: statStatus.stat.exists and item.oldName is defined
 
-- lineinfile:
+- name: ensure config is set for {{ item.newName }}
+  lineinfile:
     path: /home/{{ ansible_user }}/.config/user-dirs.dirs
     regexp: '^XDG_DESKTOP_DIR='
     line: XDG_DESKTOP_DIR="$HOME/{{ item.newName }}"
