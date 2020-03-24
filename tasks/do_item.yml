@@ -6,5 +6,5 @@
   command: mv /home/{{ ansible_user }}/{{ item.oldName }} /home/{{ ansible_user }}/{{ item.newName }}
   when: statStatus.stat.exists and item.oldName is defined
 
-- name: ensure config is set for {{ item.newName }}
+- name: ensure config is set
   shell: xdg-user-dirs-update --set {{ item.variableName }} $HOME/{{ item.newName }}

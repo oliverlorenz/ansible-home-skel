@@ -2,25 +2,25 @@
   folders:
     - oldName: Desktop
       newName: desktop
-      regex: XDG_DESKTOP_DIR
+      regex: DESKTOP
     - oldName: Documents
       newName: documents
-      regex: XDG_DOCUMENTS_DIR
+      regex: DOCUMENTS
     - oldName: Downloads
       newName: downloads
-      regex: XDG_DOWNLOAD_DIR
+      regex: DOWNLOAD
     - oldName: Music
       newName: audio
-      regex: XDG_MUSIC_DIR
+      regex: MUSIC
     - oldName: Pictures
       newName: pictures
-      regex: XDG_PICTURES_DIR
+      regex: PICTURES
     - oldName: Public
       newName: public
-      regex: XDG_PUBLICSHARE_DIR
+      regex: PUBLICSHARE
     - oldName: Templates
       newName: drafts
-      regex: XDG_TEMPLATES_DIR
+      regex: TEMPLATES
     - oldName: Videos
       newName: videos
-      regex: XDG_VIDEOS_DIR
+      regex: VIDEOS
