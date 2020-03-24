@@ -2,6 +2,7 @@
   file:
     path: /home/{{ ansible_user }}/{{ item.newName }}
     state: directory
+  with_items: "{{ folders }}"
 
 - name: ensure folder is existing
   shell: xdg-user-dirs-update --set {{ item.variableName }} $HOME/{{ item.newName }}
