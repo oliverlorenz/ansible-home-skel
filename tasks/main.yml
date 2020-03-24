@@ -1,7 +1,13 @@
-- name: ensure folder is existing
+- name: ensure new folder is existing
   file:
     path: /home/{{ ansible_user }}/{{ item.newName }}
     state: directory
+  with_items: "{{ folders }}"
+
+- name: ensure old folder is existing
+  file:
+    path: /home/{{ ansible_user }}/{{ item.oldName }}
+    state: absent
   with_items: "{{ folders }}"
 
 - name: ensure folder is existing
