@@ -1,17 +1,17 @@
 - name: check old folder name existing
-  stat: path=/home/{{ ansible_user }}/{{ oldName }}
+  stat: path=/home/{{ ansible_user }}/{{ item.oldName }}
   register: statStatus
 
 - name: ensure old folder is renamed to new folder
-  command: mv /home/{{ ansible_user }}/{{ oldName }} /home/{{ ansible_user }}/{{ newName }}
-  when: statStatus.stat.exists and oldName is defined
+  command: mv /home/{{ ansible_user }}/{{ item.oldName }} /home/{{ ansible_user }}/{{ item.newName }}
+  when: statStatus.stat.exists and item.oldName is defined
 
 - name: create new folder if there is no defined old folder
-  command: mkdir /home/{{ ansible_user }}/{{ newName }}
-  when: newName is defined and oldName is undefined
+  command: mkdir /home/{{ ansible_user }}/{{ item.newName }}
+  when: item.newName is defined and item.oldName is undefined
 
 - lineinfile:
     path: /home/{{ ansible_user }}/.config/user-dirs.dirs
     regexp: '^XDG_DESKTOP_DIR='
-    line: XDG_DESKTOP_DIR="$HOME/{{ newName }}"
-  when: statStatus.stat.exists and oldName is defined
+    line: XDG_DESKTOP_DIR="$HOME/{{ item.newName }}"
+  when: statStatus.stat.exists and item.oldName is defined

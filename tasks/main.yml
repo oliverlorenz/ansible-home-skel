@@ -1,4 +1,3 @@
 - name: ensure folder is existing
   import_tasks: do_item.yml
-  vars:
-    folders: "{{ folders }}"
+  loop: "{{ folders }}"
