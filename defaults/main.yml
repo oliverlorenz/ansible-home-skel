@@ -16,4 +16,4 @@
       newName: drafts
     - oldName: Videos
       newName: videos
-    - oldName: binaries
+    - newName: binaries
