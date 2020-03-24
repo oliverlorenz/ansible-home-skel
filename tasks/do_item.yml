@@ -9,6 +9,6 @@
 - name: ensure config is set for {{ item.newName }}
   lineinfile:
     path: /home/{{ ansible_user }}/.config/user-dirs.dirs
-    regexp: '^{{ item.variableName }}='
-    line: '{{ item.variableName }}="$HOME/{{ item.newName }}"'
+    regexp: ^{{ item.variableName }}=
+    line: {{ item.variableName }}="$HOME/{{ item.newName }}"
   when: statStatus.stat.exists and item.oldName is defined
