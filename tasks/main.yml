@@ -1,5 +1,5 @@
 - name: ensure folder is existing
-  import_tasks: do_item.yml
+  include_tasks: do_item.yml
   loop: "{{ folders }}"
   loop_control:
     loop_var: item
