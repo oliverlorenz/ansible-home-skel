@@ -2,25 +2,25 @@
   folders:
     - oldName: Desktop
       newName: desktop
-      regex: DESKTOP
+      variableName: DESKTOP
     - oldName: Documents
       newName: documents
-      regex: DOCUMENTS
+      variableName: DOCUMENTS
     - oldName: Downloads
       newName: downloads
-      regex: DOWNLOAD
+      variableName: DOWNLOAD
     - oldName: Music
       newName: audio
-      regex: MUSIC
+      variableName: MUSIC
     - oldName: Pictures
       newName: pictures
-      regex: PICTURES
+      variableName: PICTURES
     - oldName: Public
       newName: public
-      regex: PUBLICSHARE
+      variableName: PUBLICSHARE
     - oldName: Templates
       newName: drafts
-      regex: TEMPLATES
+      variableName: TEMPLATES
     - oldName: Videos
       newName: videos
-      regex: VIDEOS
+      variableName: VIDEOS
