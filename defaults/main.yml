@@ -2,17 +2,25 @@
   folders:
     - oldName: Desktop
       newName: desktop
+      variableName: XDG_DESKTOP_DIR
     - oldName: Documents
       newName: documents
+      variableName: XDG_DOCUMENTS_DIR
     - oldName: Downloads
       newName: downloads
+      variableName: XDG_DOWNLOAD_DIR
     - oldName: Music
       newName: audio
+      variableName: XDG_MUSIC_DIR
     - oldName: Pictures
       newName: pictures
+      variableName: XDG_PICTURES_DIR
     - oldName: Public
       newName: public
+      variableName: XDG_PUBLICSHARE_DIR
     - oldName: Templates
       newName: drafts
+      variableName: XDG_TEMPLATES_DIR
     - oldName: Videos
       newName: videos
+      variableName: XDG_VIDEOS_DIR
