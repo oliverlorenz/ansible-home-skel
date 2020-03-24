@@ -8,7 +8,7 @@
 
 - name: create new folder if there is no defined old folder
   command: mkdir /home/{{ ansible_user }}/{{ item.newName }}
-  when: item.newName is defined and item.oldName is undefined
+  when: item.oldName is undefined
 
 - lineinfile:
     path: /home/{{ ansible_user }}/.config/user-dirs.dirs
