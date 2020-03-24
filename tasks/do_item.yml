@@ -6,10 +6,6 @@
   command: mv /home/{{ ansible_user }}/{{ item.oldName }} /home/{{ ansible_user }}/{{ item.newName }}
   when: statStatus.stat.exists and item.oldName is defined
 
-- name: create new folder if there is no defined old folder
-  command: mkdir /home/{{ ansible_user }}/{{ item.newName }}
-  when: item.oldName is undefined
-
 - lineinfile:
     path: /home/{{ ansible_user }}/.config/user-dirs.dirs
     regexp: '^XDG_DESKTOP_DIR='
