@@ -1,3 +1,3 @@
 - name: ensure folder is existing
-  include_tasks: do_item.yml
+  shell: xdg-user-dirs-update --set {{ item.variableName }} $HOME/{{ item.newName }}
   with_items: "{{ folders }}"
