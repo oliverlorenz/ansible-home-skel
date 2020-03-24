@@ -1,0 +1,19 @@
+---
+  folders:
+    - oldName: Desktop
+      newName: desktop
+    - oldName: Documents
+      newName: documents
+    - oldName: Downloads
+      newName: downloads
+    - oldName: Music
+      newName: audio
+    - oldName: Pictures
+      newName: pictures
+    - oldName: Public
+      newName: public
+    - oldName: Templates
+      newName: drafts
+    - oldName: Videos
+      newName: videos
+    - oldName: binaries
